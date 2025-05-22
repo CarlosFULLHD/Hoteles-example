@@ -1,0 +1,19 @@
+package hoteles.demo.servInterfaces;
+
+import hoteles.demo.dto.HotelDTO;
+
+import java.util.List;
+
+public interface InterfaceHotel {
+
+    //    1. Registrar un nuevo hotel.
+    void registrarHotel(HotelDTO hotel);
+
+    //    5. Listar todos los hoteles.
+    List<HotelDTO> listarTodosLosHoteles();
+
+    //    6. Búsqueda de hotel por localidad, categoría o por ambos parámetros.
+    List<HotelDTO> BusquedaPorLocalidadCategoria(String localidad, String categoria);
+
+
+}

@@ -26,22 +26,15 @@ public class EntityHotel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_hotel;
 
-    @NotNull
-    @NotBlank
-    @NotEmpty
+    @NotBlank(message = "Tiene que ingresar un nombre")
     private String nombre;
-    @NotNull
-    @NotBlank
-    @NotEmpty
+    @NotBlank(message = "Tiene que ingresar una descripcion")
     private String descripcion;
-    @NotNull
-    @NotBlank
-    @NotEmpty
+    @NotBlank(message = "Tiene que ingresar una categoria")
     private String categoria;
+    @NotNull(message = "Tiene que ingresar Verdadero o Falso")
     private Boolean piscina; //tiene o no tiene piscina
-    @NotNull
-    @NotBlank
-    @NotEmpty
+    @NotBlank(message = "Tiene que ingresar una localidad")
     private String localidad;
 
     // Un hotel puede tener varias habitaciones

@@ -1,13 +1,14 @@
 package hoteles.demo.servInterfaces;
 
 import hoteles.demo.dto.HotelDTO;
+import hoteles.demo.entity.EntityHotel;
 
 import java.util.List;
 
 public interface InterfaceHotel {
 
     //    1. Registrar un nuevo hotel.
-    void registrarHotel(HotelDTO hotel);
+    HotelDTO registrarHotel(HotelDTO hotel);
 
     //    5. Listar todos los hoteles.
     List<HotelDTO> listarTodosLosHoteles();

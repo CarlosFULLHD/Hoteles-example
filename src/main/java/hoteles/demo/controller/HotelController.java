@@ -26,8 +26,8 @@ public class HotelController {
 
     //POST localhost:8080/hoteles
     @PostMapping
-    public ResponseEntity<HotelDTO> registrarHotel(HotelDTO hotel) {
-        HotelDTO hotelController = hotelimpl.registrarHotel(hotel);
+    public ResponseEntity<HotelDTO> registrarHotel(HotelDTO hotelDTO) {
+        HotelDTO hotelController = hotelimpl.registrarHotel(hotelDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(hotelController);
     }
 

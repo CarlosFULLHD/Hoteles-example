@@ -8,7 +8,7 @@ import java.util.List;
 public interface InterfaceHotel {
 
     //    1. Registrar un nuevo hotel.
-    HotelDTO registrarHotel(HotelDTO hotel);
+    HotelDTO registrarHotel(HotelDTO hotelDTO);
 
     //    5. Listar todos los hoteles.
     List<HotelDTO> listarTodosLosHoteles();

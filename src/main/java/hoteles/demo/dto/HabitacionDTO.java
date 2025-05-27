@@ -19,6 +19,7 @@ public class HabitacionDTO implements Serializable{
 
 
     // cantidad personas
+    private Long id_habitacion;
     private Integer tamano;
     private BigDecimal precio;
     private Boolean desayuno;

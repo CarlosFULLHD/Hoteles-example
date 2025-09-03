@@ -18,12 +18,7 @@ import java.util.stream.Collectors;
 public class HotelImpl implements InterfaceHotel {
 
     @Autowired
-    private final HotelRepository hotelRepository;
-    @Autowired
-
-    public HotelImpl(HotelRepository hotelRepository) {
-        this.hotelRepository = hotelRepository;
-    }
+    private HotelRepository hotelRepository;
 
     @Override
     public HotelDTO registrarHotel(HotelDTO hotelDTO) {

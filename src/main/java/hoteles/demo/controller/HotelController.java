@@ -16,18 +16,13 @@ public class HotelController {
 
     //localhost:8080/hoteles
     @Autowired
-    private final HotelImpl hotelimpl;
-    @Autowired
-    public HotelController(HotelImpl hotelimpl) {
-        this.hotelimpl = hotelimpl;
-    }
+    private HotelImpl hotelimpl;
 
     //    1. Registrar un nuevo hotel.
-
     //POST localhost:8080/hoteles
     @PostMapping
-    public ResponseEntity<HotelDTO> registrarHotel(HotelDTO hotelDTO) {
-        HotelDTO hotelController = hotelimpl.registrarHotel(hotelDTO);
+    public ResponseEntity<HotelDTO> registrarHotel(HotelDTO hotelDTOResponse) {
+        HotelDTO hotelController = hotelimpl.registrarHotel(hotelDTOResponse);
         return ResponseEntity.status(HttpStatus.CREATED).body(hotelController);
     }
 
@@ -43,8 +38,6 @@ public class HotelController {
     }
 
     //    6. Búsqueda de hotel por localidad, categoría o por ambos parámetros. (required = false)
-
-
     //GET localhost:8080/hoteles/busqueda
                                         //?localidad=Madrid
                                         //?categoria=5_estrellas
